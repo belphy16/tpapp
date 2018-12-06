@@ -1,0 +1,31 @@
+<div class="input-container">
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Amount">
+    </mat-form-field><br>
+
+    <mat-form-field>
+      <input matInput placeholder="Tax %">
+    </mat-form-field><br>
+
+    <mat-form-field class="vat-selector">
+      <mat-select placeholder="Select VAT">
+        <mat-option *ngFor="let vat of vats" [value]="vat.value">{{ vat.viewValue }}</mat-option>
+      </mat-select>
+    </mat-form-field><br>
+
+    <button class="btn-submit"
+      mat-stroked-button 
+      color="primary" 
+      type="submit" 
+      routerLink="/output">CALCULATE
+    </button><br>
+  </form> 
+  <div>
+    <button class="btn-back"
+      mat-stroked-button 
+      color="primary" 
+      routerLink="/home">BACK
+    </button>
+  </div> 
+</div>
