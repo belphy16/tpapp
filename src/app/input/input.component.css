@@ -1,13 +1,14 @@
 
 .input-container {
-    text-align: center;
+ text-align: center;
 }
 
+.btn-submit {
+    margin-top: 1em;
+    font-size: 1em;
+}
 
 .btn-back {
     margin-top: 1em;
-}
-
-button {
     font-size: 1em;
 }

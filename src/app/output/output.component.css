@@ -1,6 +1,8 @@
 
 .output-container {
-    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 button {
