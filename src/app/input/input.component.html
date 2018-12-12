@@ -5,6 +5,7 @@
              placeholder="Amount" 
              name="inputAmount" 
              [(ngModel)]="inputAmount" 
+             [value]="inputAmount"
              type="number" 
              step="0.01">
     </mat-form-field><br>
@@ -14,6 +15,7 @@
              placeholder="Tax %" 
              name="inputTax"
              [(ngModel)]="inputTax" 
+             [value]="inputTax"
              type="number">
     </mat-form-field><br>
 
@@ -39,7 +41,8 @@
   </div> 
 </div>
 
-<div class="dummyDisplay">
+<div class="inputRecyclebin">
   <div>Amount: {{ inputAmount }}</div>
   <div>Tax: {{ inputTax }}</div>
+  <div>iTrashtalk: {{ msg }}</div>
 </div>

@@ -8,3 +8,8 @@
 button {
     font-size: 1em;
 }
+
+.outputRecyclebin {
+    margin-top: 5em;
+    text-align: center;
+}

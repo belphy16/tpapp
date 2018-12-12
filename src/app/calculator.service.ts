@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class CalculatorService {
-  amount: number;
+ /* amount: number;
   tax: number;
   vattype: string;
 
@@ -23,7 +25,16 @@ export class CalculatorService {
   }
 
   displayCalcTax() {
-    return null;
+    if (this.vattype == "fVat") {
+      let total_tax_paid = (this.tax / 100) * this.amount;
+      let total_plus_tax = +total_tax_paid + +this.amount;
+      return total_plus_tax;
+    }
+  }
+  */
+
+  displayMessage() {
+    return "Fuck You!";
   }
 
 }

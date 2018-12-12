@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalculatorService } from '../calculator.service';
 
 export interface Vatdesc {
   value: string;
@@ -18,9 +19,12 @@ export class InputComponent implements OnInit {
 
   ];
 
-  constructor() { }
+  msg: string;
 
-  ngOnInit() {
+  constructor(private calc: CalculatorService ) { }
+
+  ngOnInit() { 
+    this.msg = this.calc.displayMessage();
   }
 
 }
