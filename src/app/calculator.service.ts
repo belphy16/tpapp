@@ -6,7 +6,31 @@ import { Injectable } from '@angular/core';
 })
 
 export class CalculatorService {
- /* amount: number;
+
+  displayFTaxPaid(amount: number, tax: number, vattype: string) {
+    if (vattype === 'fVat') {
+      const total_tax_paid = (tax / 100) * amount;
+      return total_tax_paid;
+    }
+  }
+
+  displayFCalcTotal(amount: number, tax: number, vattype: string) {
+    if (vattype === 'fVat') {
+      const total_tax_paid = (tax / 100) * amount;
+      const total_plus_tax = +total_tax_paid + +amount;
+      return total_plus_tax;
+    }
+  }
+
+  displaySum(num1: number, num2: number) {
+    return num1 + num2;
+  }
+
+  displayMessage() {
+    return 'Hello World!';
+  }
+
+  /* amount: number;
   tax: number;
   vattype: string;
 
@@ -23,18 +47,5 @@ export class CalculatorService {
   displayInputTax() {
     return this.tax;
   }
-
-  displayCalcTax() {
-    if (this.vattype == "fVat") {
-      let total_tax_paid = (this.tax / 100) * this.amount;
-      let total_plus_tax = +total_tax_paid + +this.amount;
-      return total_plus_tax;
-    }
-  }
   */
-
-  displayMessage() {
-    return "Fuck You!";
-  }
-
 }

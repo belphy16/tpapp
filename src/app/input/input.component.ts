@@ -11,7 +11,9 @@ export interface Vatdesc {
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.css']
 })
-export class InputComponent implements OnInit {  
+export class InputComponent implements OnInit {
+
+  selectedTax = 'fVat';
 
   vats: Vatdesc[] = [
     {value: 'fVat', viewValue: 'Forward VAT'},
@@ -20,11 +22,13 @@ export class InputComponent implements OnInit {
   ];
 
   msg: string;
+  // sum: number;
 
   constructor(private calc: CalculatorService ) { }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.msg = this.calc.displayMessage();
+    // this.sum = this.calc.displaySum(inputAmount, inputTax)
   }
 
 }
