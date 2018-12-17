@@ -13,6 +13,9 @@ export interface Vatdesc {
 })
 export class InputComponent implements OnInit {
 
+  inputAmount: number = 69;
+  inputTax: number = 19;
+
   selectedTax = 'fVat';
 
   vats: Vatdesc[] = [
@@ -22,7 +25,6 @@ export class InputComponent implements OnInit {
   ];
 
   msg: string;
-  // sum: number;
 
   constructor(private calc: CalculatorService ) { }
 
