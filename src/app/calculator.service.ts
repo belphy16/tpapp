@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 
 export class CalculatorService {
 
-  displayFTaxPaid(amount: number, tax: number, vattype: string) {
+  displayTaxPaid(amount: number, tax: number, vattype: string) {
     if (vattype === 'fVat') {
       const total_tax_paid = (tax / 100) * amount;
       return total_tax_paid.toFixed(2);
@@ -22,7 +22,7 @@ export class CalculatorService {
     }
   }
 
-  displayFCalcTotal(amount: number, tax: number, vattype: string) {
+  displayCalcResult(amount: number, tax: number, vattype: string) {
     if (vattype === 'fVat') {
       const total_tax_paid = (tax / 100) * amount;
       const total_plus_tax = +total_tax_paid + +amount;
