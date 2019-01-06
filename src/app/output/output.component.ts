@@ -8,12 +8,20 @@ import { CalculatorService } from '../calculator.service';
 })
 export class OutputComponent implements OnInit {
 
+  inputAmount: string;
+  inputTax: string;
   msg: string;
+
+  getDataFromSS() {
+    this.inputAmount = sessionStorage.getItem('inputed_amt');
+    this.inputTax = sessionStorage.getItem('inputed_tax');
+  }
 
   constructor(private calc: CalculatorService ) { }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.msg = this.calc.displayMessage();
+    this.getDataFromSS();
   }
 
 }
