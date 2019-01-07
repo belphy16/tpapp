@@ -2,9 +2,9 @@
 <div class="output-container">
   <div>
     <mat-list class="calc-input">
-      <mat-list-item>Amount: {{ inputAmount }}</mat-list-item>
+      <mat-list-item>Amount: {{ o_IAmount }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item>Tax %: {{ inputTax }}</mat-list-item>
+      <mat-list-item>Tax %: {{ o_ITax }}</mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>Tax Type: {{ taxType }}</mat-list-item>
       <mat-divider></mat-divider>
@@ -12,9 +12,9 @@
   </div><br>
   <div>
     <mat-list class="calc-results">
-      <mat-list-item>calculated Tax: </mat-list-item>
+      <mat-list-item>calculated Tax: {{ o_CTax }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item>calculated Total: </mat-list-item>
+      <mat-list-item>calculated Total: {{ o_CTotal }}</mat-list-item>
       <mat-divider></mat-divider>
     </mat-list>
   </div><br>

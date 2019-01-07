@@ -17,3 +17,9 @@
     margin-top: 1em;
     text-align: center;
 }
+
+.inputRecyclebin label {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}

@@ -8,13 +8,18 @@ import { CalculatorService } from '../calculator.service';
 })
 export class OutputComponent implements OnInit {
 
-  inputAmount: string;
-  inputTax: string;
+  o_IAmount: string;
+  o_ITax: string;
   msg: string;
 
+  o_CTax: string;
+  o_CTotal: string;
+
   getDataFromSS() {
-    this.inputAmount = sessionStorage.getItem('inputed_amt');
-    this.inputTax = sessionStorage.getItem('inputed_tax');
+    this.o_IAmount = sessionStorage.getItem('inputed_amt');
+    this.o_ITax = sessionStorage.getItem('inputed_tax');
+    this.o_CTax = sessionStorage.getItem('calculated_tax');
+    this.o_CTotal = sessionStorage.getItem('calculated_total');
   }
 
   constructor(private calc: CalculatorService ) { }
