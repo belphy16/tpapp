@@ -11,13 +11,15 @@ import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
 import { CalculatorService } from './calculator.service';
 import { from } from 'rxjs';
+import { ShowpdfComponent } from './showpdf/showpdf.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     InputComponent,
-    OutputComponent
+    OutputComponent,
+    ShowpdfComponent
   ],
   imports: [
     BrowserModule,

@@ -3,13 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
+import { ShowpdfComponent } from './showpdf/showpdf.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'input', component: InputComponent },
-  { path: 'output', component: OutputComponent }
+  { path: 'output', component: OutputComponent },
+  { path: 'showpdf', component: ShowpdfComponent }
 ];
 
 @NgModule({

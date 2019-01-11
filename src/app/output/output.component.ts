@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CalculatorService } from '../calculator.service';
+import * as moment from 'moment';
+import 'moment/locale/de';
 
 @Component({
   selector: 'app-output',
@@ -28,5 +30,8 @@ export class OutputComponent implements OnInit {
     this.msg = this.calc.displayMessage();
     this.getDataFromSS();
   }
+
+  // now = moment.locale('de');
+ now = moment().format('LL');
 
 }
