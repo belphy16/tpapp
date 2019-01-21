@@ -11,7 +11,6 @@ import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
 import { CalculatorService } from './calculator.service';
 import { from } from 'rxjs';
-import { ShowpdfComponent } from './showpdf/showpdf.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,6 @@ import { ShowpdfComponent } from './showpdf/showpdf.component';
     HomeComponent,
     InputComponent,
     OutputComponent,
-    ShowpdfComponent
   ],
   imports: [
     BrowserModule,

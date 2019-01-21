@@ -3,6 +3,10 @@
  text-align: center;
 }
 
+mat-form-field {
+    width: auto;
+}
+
 .btn-submit {
     margin-top: 1em;
     font-size: 1em;
