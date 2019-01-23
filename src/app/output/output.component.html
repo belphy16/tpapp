@@ -8,6 +8,8 @@
       <mat-divider></mat-divider>
       <mat-list-item>Tax Type: {{ taxType }}</mat-list-item>
       <mat-divider></mat-divider>
+      <mat-list-item>Test Date: {{ o_tDate }}</mat-list-item>
+      <mat-divider></mat-divider>
     </mat-list>
   </div><br>
   <div>
@@ -27,16 +29,16 @@
     </button>
   </div>
 
-  <div class="outputRecyclebin">
-    <div>oJunk: {{ msg }}</div>
-    <div>{{ msg2 }}</div>
-    <div>DT => {{ now }}</div>
-  </div>
-
   <div>
     <button mat-raised-button 
       color="primary" 
       routerLink="/testpdf">NEXT
   </button>
+  </div>
+  
+  <div class="outputRecyclebin">
+    <div>oJunk: {{ msg }}</div>
+    <div>{{ msg2 }}</div>
+    <!-- <div>DT => {{ now }}</div> -->
   </div>
 </div>

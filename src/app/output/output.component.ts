@@ -16,10 +16,13 @@ export class OutputComponent implements OnInit {
 
   o_CTax: string;
   o_CTotal: string;
+  o_tDate: any;
 
   getDataFromSS() {
     this.o_IAmount = sessionStorage.getItem('inputed_amt');
     this.o_ITax = sessionStorage.getItem('inputed_tax');
+    this.o_tDate = moment(sessionStorage.getItem('tdate')).format('ll');
+    // this.o_tDate = new Date(sessionStorage.getItem('tdate'));
     this.o_CTax = sessionStorage.getItem('calculated_tax');
     this.o_CTotal = sessionStorage.getItem('calculated_total');
   }
@@ -32,6 +35,6 @@ export class OutputComponent implements OnInit {
   }
 
   // now = moment.locale('de');
- now = moment().format('LL');
+ // now = moment().format('LL');
 
 }

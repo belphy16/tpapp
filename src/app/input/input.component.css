@@ -4,17 +4,19 @@
 }
 
 mat-form-field {
-    width: auto;
+    width: 15em;
 }
 
-.btn-submit {
-    margin-top: 1em;
-    font-size: 1em;
+.nav-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 1em;
 }
 
-.btn-back {
-    margin-top: 1em;
-    font-size: 1em;
+.nav-buttons div {
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .inputRecyclebin {

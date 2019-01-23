@@ -9,6 +9,11 @@ export class HomeComponent implements OnInit {
 
   info:string = 'get started';
 
+  // clears & deletes all data in sessionStorage
+  clearSS() {
+    sessionStorage.clear();
+  }
+
   constructor() { }
 
   ngOnInit() {

@@ -20,29 +20,38 @@ export class InputComponent implements OnInit {
   vats: Vatdesc[] = [
     {value: 'fVat', viewValue: 'Forward VAT'},
     {value: 'rVat', viewValue: 'Reverse VAT'}
-
   ];
 
   msg: string;
 
-  calcTax;
-  calcTotal;
+  testDate: Date; // = new Date();
 
   saveDataToSS() {
     sessionStorage.setItem('inputed_amt', this.inputAmount);
     sessionStorage.setItem('inputed_tax', this.inputTax);
-    sessionStorage.setItem('calculated_tax', this.calcTax);
-    sessionStorage.setItem('calculated_total', this.calcTotal);
+    sessionStorage.setItem('tdate', this.testDate.toDateString());
+    // sessionStorage.setItem('calculated_tax', this.calcTax);
+    // sessionStorage.setItem('calculated_total', this.calcTotal);
+  }
+
+  getDateFromSS() {
+
+    if(sessionStorage.getItem('tdate') === null || undefined ) {
+      return new Date('')
+
+    } else {
+      return new Date(sessionStorage.getItem('tdate'));
+    }   
   }
 
   constructor(private calc: CalculatorService ) { }
 
   ngOnInit() {
     this.msg = this.calc.displayMessage();
-    this.calcTax = this.calc.displayTaxPaid(this.inputAmount, this.inputTax, this.selectedTax);
+    this.testDate = this.getDateFromSS();
+    /* this.calcTax = this.calc.displayTaxPaid(this.inputAmount, this.inputTax, this.selectedTax);
     this.calcTotal = this.calc.displayCalcResult(this.inputAmount, this.inputTax, this.selectedTax);
-    // this.saveDataToSS();
-    // this.sum = this.calc.displaySum(inputAmount, inputTax)
+    this.sum = this.calc.displaySum(inputAmount, inputTax) */
   }
 
 }

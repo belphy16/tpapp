@@ -10,8 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
 import { CalculatorService } from './calculator.service';
-import { from } from 'rxjs';
 import { TestpdfComponent } from './testpdf/testpdf.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [

@@ -22,26 +22,36 @@
       </mat-select>
     </mat-form-field><br>
 
-    <button class="btn-submit"
-      mat-raised-button 
-      color="primary" 
-      (click)="saveDataToSS()" 
-      routerLink="/output">CALCULATE
-    </button><br> 
+    <mat-form-field>
+      <input matInput [matDatepicker]="dp" placeholder="Choose a date" [(ngModel)]="testDate">
+      <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+      <mat-datepicker #dp></mat-datepicker>
+    </mat-form-field>
+
+<div class="nav-buttons">
   <div>
-    <button class="btn-back"
+      <button 
       mat-stroked-button 
       color="primary" 
       routerLink="/home">BACK
     </button>
-  </div> 
+  </div>
+  <div>
+      <button 
+      mat-raised-button 
+      color="primary" 
+      (click)="saveDataToSS()" 
+      routerLink="/output">NEXT
+    </button>
+  </div>
+  </div>    
 </div>
 
 <div class="inputRecyclebin">
-  <div>Amount: {{ inputAmount }}</div>
-  <div>Tax: {{ inputTax }}</div><br>
-  <div>iJunk: {{ msg }}</div><br>
+  <div>Amount => {{ inputAmount }}</div>
+  <div>Tax => {{ inputTax }}</div><br>
+  <div>iJunk => {{ msg }}</div><br>
   <div>
-    <div>TaxPaid => {{ calc.displayTaxPaid(inputAmount, inputTax, selectedTax) }}</div>
-    <div>CalcResult => {{ calc.displayCalcResult(inputAmount, inputTax, selectedTax) }}</div>
-</div>
+    <div>calcTaxPaid => {{ calc.displayTaxPaid(inputAmount, inputTax, selectedTax) }}</div>
+    <div>calcResultFinal => {{ calc.displayCalcResult(inputAmount, inputTax, selectedTax) }}</div>
+  </div>

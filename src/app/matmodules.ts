@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatNativeDateModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
@@ -8,6 +8,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { from } from 'rxjs';
 
 
@@ -22,7 +23,9 @@ import { from } from 'rxjs';
       MatSelectModule,
       MatListModule,
       MatIconModule,
-      MatTableModule
+      MatTableModule,
+      MatDatepickerModule,
+      MatNativeDateModule
 ],
   exports: [
       MatButtonModule, 
@@ -34,7 +37,9 @@ import { from } from 'rxjs';
       MatSelectModule,
       MatListModule,
       MatIconModule,
-      MatTableModule
+      MatTableModule,
+      MatDatepickerModule,
+      MatNativeDateModule
     ],
 })
 export class MatModules { }
